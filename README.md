@@ -1,23 +1,22 @@
-# Slim Framework 4 Skeleton Application
+# Shop API
 
-[![Coverage Status](https://coveralls.io/repos/github/slimphp/Slim-Skeleton/badge.svg?branch=master)](https://coveralls.io/github/slimphp/Slim-Skeleton?branch=master)
-
-Use this skeleton application to quickly setup and start working on a new Slim Framework 4 application. This application uses the latest Slim 4 with Slim PSR-7 implementation and PHP-DI container implementation. It also uses the Monolog logger.
-
-This skeleton application was built for Composer. This makes setting up a new Slim Framework application quick and easy.
-
-## Install the Application
-
-Run this command from the directory in which you want to install your new Slim Framework application.
-
-```bash
-composer create-project slim/slim-skeleton [my-app-name]
-```
-
-Replace `[my-app-name]` with the desired directory name for your new application. You'll want to:
+Change dir to `[my-app-name]` with the desired directory name for your new application. You'll want to:
 
 * Point your virtual host document root to your new application's `public/` directory.
 * Ensure `logs/` is web writable.
+
+## Install dependencies
+Install dependencies via command
+```bash
+composer install
+```
+
+## ENV vars
+Edit following env vars in `.env` file in order to setup database connection:
+* `DB_HOST`
+* `DB_NAME`
+* `DB_USERNAME`
+* `DB_PASSWORD`
 
 To run the application in development, you can run these commands 
 
@@ -38,5 +37,7 @@ Run this command in the application directory to run the test suite
 ```bash
 composer test
 ```
-
-That's it! Now go build something cool.
+### OpenAPI documentation
+Doc files are in `[my-app-name]/swagger-doc` and JSON documentation is available via api endpoint for swagger
+ ui which btw, is not included in this project. Endpoint is 
+ `http://localhost:8080/open-api`
