@@ -29,7 +29,7 @@ class Order implements \JsonSerializable
      */
     private $cancellationDate;
     /**
-     * @var BillingStatus
+     * @var string
      */
     private $billingStatus;
     /**
