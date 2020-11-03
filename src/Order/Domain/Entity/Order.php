@@ -106,7 +106,7 @@ class Order implements \JsonSerializable
     }
 
     /**
-     * @return string 
+     * @return string
      */
     public function getBillingStatus(): string
     {
