@@ -87,8 +87,7 @@ class MysqlOrderRepository implements OrderRepository
                 o.total, 
                 o.active,
                 o.created_at,
-                o.cancellation_date, 
-                bs.ID as billingStatusId,
+                o.cancellation_date,
                 bs.status_0,
                 ba.ID as billingAddressId,
                 ba.company,
@@ -134,10 +133,7 @@ class MysqlOrderRepository implements OrderRepository
         $order->setIsActive($result['active']);
         $order->setCreatedAt($result['created_at']);
         $order->setCancellationDate($result['cancellation_date']);
-
-        $billingStatus = new BillingStatus();
-//        $billingStatus->setId($result['billingStatusId']);
-        $billingStatus->setStatus($result['status_0']);
+        $order->setBillingStatus($result['status_0']);
 
         $billingAddress = new OrderAddress();
 //        $billingAddress->setId($result['billingAddressId']);
@@ -163,7 +159,6 @@ class MysqlOrderRepository implements OrderRepository
         $deliveryAddress->setLocation($result['deliveryAddressLocation']);
         $deliveryAddress->setPhoneNumber($result['deliveryAddressPhone']);
 
-        $order->setBillingStatus($billingStatus);
         $order->setBillingAddress($billingAddress);
         $order->setDeliveryAddress($deliveryAddress);
 

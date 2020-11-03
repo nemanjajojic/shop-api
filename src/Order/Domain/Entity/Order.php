@@ -106,17 +106,17 @@ class Order implements \JsonSerializable
     }
 
     /**
-     * @return BillingStatus
+     * @return string 
      */
-    public function getBillingStatus(): BillingStatus
+    public function getBillingStatus(): string
     {
         return $this->billingStatus;
     }
 
     /**
-     * @param BillingStatus $billingStatus
+     * @param string $billingStatus
      */
-    public function setBillingStatus(BillingStatus $billingStatus): void
+    public function setBillingStatus(string $billingStatus): void
     {
         $this->billingStatus = $billingStatus;
     }

@@ -153,7 +153,6 @@
  *   schema="BillingStatus",
  *   type="object",
  *   description="Entity for biling status",
- *   @OA\Property(property="id", type="integer"),
  *   @OA\Property(property="status", type="string"),
  * )
  *
@@ -161,7 +160,6 @@
  *   schema="OrderAddress",
  *   type="object",
  *   description="Entity for billing and delivery address",
- *   @OA\Property(property="id", type="integer"),
  *   @OA\Property(property="title", type="string"),
  *   @OA\Property(property="company", type="string"),
  *   @OA\Property(property="firstname", type="string"),
